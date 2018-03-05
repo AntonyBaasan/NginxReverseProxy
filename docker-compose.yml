@@ -1,0 +1,18 @@
+version: '1'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+     - "80:80"
+    volumes:
+     - "/home/ant/projects/simple-nginx/nginx/conf/default.conf:/etc/nginx/conf.d/default.conf"
+
+  tomcat1:
+    build: ./tomcat1
+    ports:
+     - "8081:8080"
+
+  tomcat2:
+    build: ./tomcat2
+    ports:
+     - "8082:8080"
